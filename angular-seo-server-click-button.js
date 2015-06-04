@@ -39,13 +39,12 @@ var renderHtml = function(url, cb) {
         });
     };
     page.open(url, function() {
-  page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", function() {
-    page.evaluate(function() {
-      $("button#push").click();
+        page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", function() {
+            page.evaluate(function() {
+                $("button#push").click();
+            });
+        });
     });
-  
-  });
-});
 };
 
 server.listen(port, function (request, response) {
